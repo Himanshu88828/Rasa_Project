@@ -1,0 +1,83 @@
+version: "3.0"
+
+intents:
+  - bot_challenge
+  - deny
+  - goodbye
+  - greet
+  - non_veg
+  - order_name_non_veg
+  - order_name_veg
+  - vegetarian
+  - what_do_you_have
+
+responses:
+  utter_botgreet:
+  - text: "Hey! How can I help you?"
+
+
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_veg_non_veg:
+    - text: "What would you prefer:"
+      buttons:
+        - title: Vegetarian
+          payload: /vegetarian
+        - title: Non-Vegetarian
+          payload: /non_veg
+
+  utter_veg:
+    - text: "Here are the meals for you"
+      image: https://d4t7t8y8xqo0t.cloudfront.net/resized/1080X/restaurant%2F504036%2Fmenu%2F504036_1.jpg
+
+  utter_non_veg:
+    - text: "Here are the non_veg meals for you"
+      image: https://d4t7t8y8xqo0t.cloudfront.net/resized/1080X/restaurant%2F504036%2Fmenu%2F504036_2.jpg
+
+  utter_anthingelse:
+    - text: "Is there anything else would you like to order"
+
+  utter_thanks:
+    - text: "Thanks. We will get your order shortly"
+
+  utter_default:
+    - text: "Sorry, I didn't understand, please try again..."
+
+
+
+
+actions:
+  - utter_botgreet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iambot
+  - utter_botgreet
+  - utter_veg_non_veg
+  - utter_veg
+  - utter_non_veg
+  - utter_anthingelse
+  - utter_thanks
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
